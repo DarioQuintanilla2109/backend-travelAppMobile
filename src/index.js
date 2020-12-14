@@ -25,7 +25,7 @@ app.use(trackRoutes)
 const mongoURI =
   'mongodb+srv://admin:Dario2109@cluster0.yr1uz.mongodb.net/<dbname>?retryWrites=true&w=majority'
 mongoose.connect(mongoURI, {
-  // useUnifiedTopology: true,
+  useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
 })
