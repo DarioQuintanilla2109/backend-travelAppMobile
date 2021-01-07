@@ -7,12 +7,10 @@ const authRoutes = require('./routes/authRoutes')
 const trackRoutes = require('./routes/trackRoutes')
 const requireAuth = require('./middlewares/requireAuth')
 
-//handles incoming json information
-const bodyParser = require('body-parser')
-
 //app represents our entire application
 const app = express()
-
+//handles incoming json information
+const bodyParser = require('body-parser')
 //makes sure all our json info is parsed first
 app.use(bodyParser.json())
 

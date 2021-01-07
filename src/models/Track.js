@@ -11,11 +11,9 @@ const pointSchema = new mongoose.Schema({
     speed: Number,
   },
 })
-
 const trackSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    //pointing to our User obj in User.js
     ref: 'User',
   },
   name: {
@@ -25,5 +23,4 @@ const trackSchema = new mongoose.Schema({
   locations: [pointSchema],
 })
 
-//ties collection of data in mongo db to mongoose
 mongoose.model('Track', trackSchema)
